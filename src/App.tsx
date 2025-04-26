@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import GoogleMap from './components/GoogleMap/GoogleMap';
 import SearchBar from './components/SearchBar/SearchBar';
-import { GoogleMapProps } from './components/GoogleMap/GoogleMap';
 
 import './App.css';
 
 function App() {
-  const [coords, setCoords] = useState<GoogleMapProps | null>(null);
+  const [coords, setCoords] = useState<{ lat: number, lng: number }>({ lat: 38.1000, lng: -98.5833 });
 
   return (
     <>

@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  APIProvider,
-  Map,
   Marker,
-  useMarkerRef
 } from '@vis.gl/react-google-maps';
-
-const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API;
 
 const FlockMarkers = ({ cameras }: any) => {
 
-  const [markerRef, marker] = useMarkerRef();
   const [marked, setMarked] = useState(false);
   const [markers, setMarkers] = useState([]);
 

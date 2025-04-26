@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   APIProvider,
   Map,
@@ -14,7 +14,7 @@ const flockCameras = [
 ];
 
 export interface GoogleMapProps {
-  coords: { lat: number, lng: number } | null;
+  coords: { lat: number, lng: number };
 }
 
 const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API;
