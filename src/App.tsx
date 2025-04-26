@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import './App.css';
 
 function App() {
-  const [mapSettings, setMapSettings] = useState<{ lat: number, lng: number, zoom: number }>({ lat: 38.1000, lng: -98.5833, zoom: 4 });
+  const [mapSettings, setMapSettings] = useState<{ lat: number, lng: number, zoom: number }>({ lat: 38.1000, lng: -98.5833, zoom: (window.innerWidth > 480 ? 4 : 3)});
 
   return (
     <>

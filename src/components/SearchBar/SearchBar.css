@@ -25,3 +25,9 @@ div[class*='option']:hover {
     border-radius: 10px;
     color: #ffffff;
 }
+
+@media only screen and (max-width: 900px) {
+    .search-bar {
+        width: 100vw;
+    }
+}

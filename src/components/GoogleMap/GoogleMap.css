@@ -1,0 +1,11 @@
+.flock-map {
+    width: 80vw;
+    height: 62vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .flock-map {
+        width: 100vw;
+        height: 65vh;
+    }
+}

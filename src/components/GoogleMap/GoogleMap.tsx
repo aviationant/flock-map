@@ -5,6 +5,7 @@ import {
   useMap
 } from '@vis.gl/react-google-maps';
 import FlockMarkers from '../FlockMarkers/FlockMarkers';
+import './GoogleMap.css';
 
 const flockCameras = [
   { lat: 40.730610, lng: -73.935242 },
@@ -41,7 +42,8 @@ const GoogleMap = ({ mapSettings }: GoogleMapProps) => {
         defaultZoom={4}
         gestureHandling={'greedy'}
         disableDefaultUI={false}
-        id={"flock-map"}>
+        id={"flock-map"}
+        className="flock-map">
         <GoToCoords />
         <FlockMarkers cameras={flockCameras} />
       </Map>
