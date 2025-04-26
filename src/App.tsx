@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <body>
-        <div className='flock-title'>
-          <p className='lato-regular'>flock map</p>
+        <div className='title-block'>
+          <p className='lato-regular flock-title'>flock map</p>
         </div>
         <div className='content'>
           <div className=''>

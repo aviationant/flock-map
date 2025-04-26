@@ -43,6 +43,7 @@ const GoogleMap = ({ mapSettings }: GoogleMapProps) => {
         gestureHandling={'greedy'}
         disableDefaultUI={false}
         id={"flock-map"}
+        mapId={"flock-map"}
         className="flock-map">
         <GoToCoords />
         <FlockMarkers cameras={flockCameras} />
