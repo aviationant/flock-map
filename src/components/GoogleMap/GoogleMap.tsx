@@ -14,22 +14,22 @@ const flockCameras = [
 ];
 
 export interface GoogleMapProps {
-  coords: { lat: number, lng: number };
+  mapSettings: { lat: number, lng: number, zoom: number };
 }
 
 const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API;
 
-const GoogleMap = ({ coords }: GoogleMapProps) => {
+const GoogleMap = ({ mapSettings }: GoogleMapProps) => {
 
   const GoToCoords = () => {
     const map = useMap('flock-map');
     useEffect(() => {
       if (!map) return;
-      if (map && coords) {
-        map.setCenter({ lat: coords["lat"], lng: coords["lng"] });
-        map.setZoom(9);
+      if (map && mapSettings) {
+        map.setCenter({ lat: mapSettings["lat"], lng: mapSettings["lng"] });
+        map.setZoom(mapSettings["zoom"]);
       }
-    }, [map, coords]);
+    }, [map, mapSettings]);
     return <></>;
   };
 
@@ -37,7 +37,7 @@ const GoogleMap = ({ coords }: GoogleMapProps) => {
     <APIProvider apiKey={GOOGLE_API_KEY} onLoad={() => console.log('Maps API has loaded.')}>
       <Map
         style={{ width: '80vw', height: '60vh' }}
-        defaultCenter={coords ?? { lat: 38.1000, lng: -98.5833 }}
+        defaultCenter={{ lat: 38.1000, lng: -98.5833 }}
         defaultZoom={4}
         gestureHandling={'greedy'}
         disableDefaultUI={false}

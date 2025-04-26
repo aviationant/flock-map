@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import './App.css';
 
 function App() {
-  const [coords, setCoords] = useState<{ lat: number, lng: number }>({ lat: 38.1000, lng: -98.5833 });
+  const [mapSettings, setMapSettings] = useState<{ lat: number, lng: number, zoom: number }>({ lat: 38.1000, lng: -98.5833, zoom: 4 });
 
   return (
     <>
@@ -15,10 +15,10 @@ function App() {
         </div>
         <div className='content'>
           <div className=''>
-            <SearchBar onSelect={(location) => setCoords(location)} />
+            <SearchBar onSelect={(location) => setMapSettings(location)} />
           </div>
           <div className=''>
-            <GoogleMap coords={coords} />
+            <GoogleMap mapSettings={mapSettings} />
           </div>
           <div className='footer-text'>
             <p>Markers represent location of known Flock Safety cameras.<br />Locations may not be exhaustive.</p>

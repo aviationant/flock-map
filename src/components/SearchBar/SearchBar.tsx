@@ -3,7 +3,7 @@ import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import './SearchBar.css';
 
 interface SearchBarProps {
-  onSelect: (coords: { lat: number, lng: number}) => void;
+  onSelect: (mapSettings: { lat: number, lng: number, zoom: number}) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSelect }) => {
@@ -20,7 +20,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSelect }) => {
       if (status == google.maps.GeocoderStatus.OK) {
         var lat = results[0].geometry.location.lat();
         var lng = results[0].geometry.location.lng();
-        onSelect({ lat, lng });
+        var zoom = 9;
+        onSelect({ lat, lng, zoom });
       } else {
         console.error('Geocode failed:', status);
       }
