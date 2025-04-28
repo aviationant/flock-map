@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import GoogleMap from './components/GoogleMap/GoogleMap';
 import SearchBar from './components/SearchBar/SearchBar';
+import {
+  Link
+} from "react-router";
 
 import './App.css';
 
@@ -11,7 +14,7 @@ function App() {
     <>
       <body>
         <div className='title-block'>
-          <p className='lato-regular flock-title'>flock map</p>
+          <Link reloadDocument to="/" style={{ textDecoration: 'none', color: 'white' }}><p className='lato-regular flock-title'>flock map</p></Link>
         </div>
         <div className='content'>
           <div className=''>
