@@ -11,7 +11,7 @@ function Title() {
                 <p className='lato-regular flock-title'>
                     <span className='flock-text'>f</span>
                     <span className='flock-image-wrapper'>
-                        <img src='src/assets/flock-i.svg' className='flock-i' />
+                        <img src={'src/assets/flock-i.svg'} className='flock-i' />
                     </span>
                     <span className='flock-text'>ock map</span>
                 </p>
