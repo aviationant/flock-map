@@ -9,7 +9,7 @@
 
 .title-block {
     display: flex;
-    height: 200px;
+    height: 150px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -19,11 +19,9 @@
     letter-spacing: 20px;
 }
 
-@media only screen and (max-width: 720px) {
-    .title-block {
-        font-size: 38px;
-        height: 70px;
-    }
+.col {
+    flex: 1;
+    position: relative;
 }
 
 .flock-title {
@@ -32,27 +30,74 @@
     left: 0.5vw;
 }
 
-@media only screen and (max-width: 720px) {
-    .flock-title {
-        left: 2.5vw;
-    }
+.flock-i {
+    height: 90%;
+    width: auto;
+    shape-rendering: crispEdges;
 }
 
-.footer-text {
+.flock-text {
+    display: inline;
+}
+
+.flock-image-wrapper {
+    display: inline-flex;
+    align-items: center;
+    height: 1em;
+    padding-right: 10px;
+}
+
+.footer {
     display: flex;
     text-align: center;
     justify-content: center;
     flex-direction: column;
 }
 
+.about-button {
+    display: block;
+    background: black;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    border-width: 0.5px;
+    /* border: none; */
+    padding: 5px 20px 5px 20px;
+    font-size: 32px;
+    margin: 15px;
+}
+
+.about-button:hover {
+    background: #2E3A59;
+}
+
+button:active {
+    border-style: outset;
+}
+
 .lato-regular {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .lato-light {
+}
+
+.lato-light {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-style: normal;
-  }
+}
+
+@media only screen and (max-width: 720px) {
+    .title-block {
+        font-size: 38px;
+        height: 70px;
+    }
+
+    .flock-title {
+        left: 2.5vw;
+    }
+
+    .about-button {
+        margin-top: 30px;
+    }
+}
